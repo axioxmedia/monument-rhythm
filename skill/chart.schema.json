@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Monument Rhythm chart",
+  "type": "object",
+  "required": ["version", "title", "audio", "lanes", "notes"],
+  "properties": {
+    "version": { "type": "integer", "const": 1 },
+    "title": { "type": "string" },
+    "artist": { "type": "string" },
+    "audio": { "type": "string", "description": "Filename of the audio inside the same song folder." },
+    "duration": { "type": "number" },
+    "bpm": { "type": "number" },
+    "offset": { "type": "number", "description": "Seconds added to every note time. Positive delays notes." },
+    "lanes": { "type": "integer", "minimum": 2, "maximum": 6 },
+    "difficulty": { "type": "string", "enum": ["easy", "normal", "hard"] },
+    "preview": { "type": "number" },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["t", "lane", "type"],
+        "properties": {
+          "t": { "type": "number", "description": "Hit time in seconds from audio start." },
+          "lane": { "type": "integer", "minimum": 0 },
+          "type": { "type": "string", "enum": ["tap", "hold"] },
+          "end": { "type": "number", "description": "Hold release time. Required when type is hold." }
+        }
+      }
+    }
+  }
+}

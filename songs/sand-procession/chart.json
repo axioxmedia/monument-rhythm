@@ -1,0 +1,313 @@
+{
+  "version": 1,
+  "title": "Sand Procession",
+  "artist": "Monument Rhythm",
+  "audio": "audio.mp3",
+  "duration": 32.0,
+  "bpm": 96.0,
+  "offset": 0.0,
+  "lanes": 4,
+  "difficulty": "normal",
+  "preview": 5.308,
+  "notes": [
+    {
+      "t": 0.6264,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 1.2444,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 1.8708,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 2.4972,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 3.1236,
+      "lane": 0,
+      "type": "hold",
+      "end": 3.5746
+    },
+    {
+      "t": 3.75,
+      "lane": 2,
+      "type": "hold",
+      "end": 4.201
+    },
+    {
+      "t": 4.3764,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 4.9944,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 5.3076,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 5.6208,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 6.2472,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 6.8736,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 6.8736,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 7.5,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 8.1264,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 8.7445,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 9.3709,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 9.6841,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 9.9973,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 10.6237,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 11.25,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 11.8764,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 12.4945,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 13.1209,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 13.1209,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 13.7473,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 14.0605,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 14.3737,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 15.0001,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 15.6265,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 16.2445,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 16.8709,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 17.4973,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 18.1237,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 18.4369,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 18.7501,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 18.7501,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 19.3765,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 19.9945,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 20.6209,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 21.2473,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 21.8737,
+      "lane": 1,
+      "type": "hold",
+      "end": 22.3247
+    },
+    {
+      "t": 22.5001,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 22.8133,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 23.1181,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 23.7445,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 24.3709,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 24.9973,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 24.9973,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 25.6237,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 26.2501,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 26.8765,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 27.1813,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 27.4945,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 28.1209,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 28.7473,
+      "lane": 2,
+      "type": "hold",
+      "end": 29.1983
+    },
+    {
+      "t": 29.3737,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 30.0001,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 30.6182,
+      "lane": 1,
+      "type": "tap"
+    }
+  ]
+}

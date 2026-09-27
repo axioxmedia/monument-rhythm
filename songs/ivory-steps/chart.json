@@ -1,0 +1,332 @@
+{
+  "version": 1,
+  "title": "Ivory Steps",
+  "artist": "Monument Rhythm",
+  "audio": "audio.mp3",
+  "duration": 21.5,
+  "bpm": 116.0,
+  "offset": 0.0,
+  "lanes": 4,
+  "difficulty": "normal",
+  "preview": 3.034,
+  "notes": [
+    {
+      "t": 0.5043,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 0.5043,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 1.0085,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 1.5128,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 1.7608,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 2.0171,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 2.265,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 2.5214,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 2.7693,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 3.034,
+      "lane": 0,
+      "type": "hold",
+      "end": 3.391
+    },
+    {
+      "t": 3.5299,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 3.9618,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 4.2181,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 4.2181,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 4.466,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 4.7224,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 4.9703,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 5.2266,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 5.4746,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 5.9789,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 6.4915,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 6.7394,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 6.9958,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 7.2437,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 7.4917,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 7.4917,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 7.748,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 8.0043,
+      "lane": 0,
+      "type": "hold",
+      "end": 8.3674
+    },
+    {
+      "t": 8.5086,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 9.0129,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 9.2608,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 9.5171,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 9.7651,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 10.0214,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 10.2777,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 10.5257,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 11.0299,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 11.0299,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 11.4618,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 11.7181,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 11.9661,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 12.2224,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 12.4703,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 12.7267,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 12.983,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 13.4789,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 13.9832,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 14.2395,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 14.4958,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 14.4958,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 14.7437,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 15.0001,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 15.248,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 15.5043,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 16.0086,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 16.5129,
+      "lane": 3,
+      "type": "hold",
+      "end": 16.876
+    },
+    {
+      "t": 17.0172,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 17.5214,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 18.0257,
+      "lane": 2,
+      "type": "tap"
+    },
+    {
+      "t": 18.53,
+      "lane": 1,
+      "type": "tap"
+    },
+    {
+      "t": 18.9702,
+      "lane": 3,
+      "type": "tap"
+    },
+    {
+      "t": 19.4661,
+      "lane": 0,
+      "type": "tap"
+    },
+    {
+      "t": 19.9704,
+      "lane": 1,
+      "type": "tap"
+    }
+  ]
+}

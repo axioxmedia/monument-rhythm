@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <title>沙碑节拍 Monument Rhythm</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <div id="grain" aria-hidden="true"></div>
+
+  <section id="menu" class="view is-on">
+    <div class="monument" aria-hidden="true">
+      <div class="step s1"></div>
+      <div class="step s2"></div>
+      <div class="step s3"></div>
+      <div class="obelisk"></div>
+    </div>
+    <header class="mast">
+      <p class="eyebrow">A quiet four-lane rite</p>
+      <h1>沙碑节拍</h1>
+      <p class="sub">Monument Rhythm</p>
+    </header>
+    <div class="menu-panel">
+      <div class="panel-head">
+        <span>曲目</span>
+        <div class="actions">
+          <button type="button" id="btn-skill" class="ghost">下载 SKILL.md</button>
+          <button type="button" id="btn-upload" class="ghost">上传曲包</button>
+        </div>
+      </div>
+      <p class="hint" id="library-hint">曲目保存在本机浏览器中。上传 Skill 生成的 zip 后，刷新仍在。</p>
+      <ul id="song-list" class="song-list"></ul>
+    </div>
+    <footer class="mast-foot">
+      <span>键盘 D F J K · 亦可触屏</span>
+      <span>纯静态页面</span>
+    </footer>
+  </section>
+
+  <section id="game" class="view">
+    <canvas id="stage"></canvas>
+    <div id="hud">
+      <button type="button" id="btn-pause" class="ghost hud-btn" aria-label="暂停">Ⅱ</button>
+      <div class="hud-left">
+        <p id="hud-title"></p>
+        <p id="hud-artist"></p>
+      </div>
+      <div class="hud-right">
+        <p id="hud-score">0</p>
+        <p id="hud-acc">100.0%</p>
+      </div>
+    </div>
+    <div id="judge" class="judge"></div>
+    <div id="combo" class="combo"></div>
+    <div id="pads" class="pads" aria-hidden="false">
+      <button type="button" class="pad" data-lane="0">D</button>
+      <button type="button" class="pad" data-lane="1">F</button>
+      <button type="button" class="pad" data-lane="2">J</button>
+      <button type="button" class="pad" data-lane="3">K</button>
+    </div>
+    <div id="pause-layer" class="overlay">
+      <div class="tablet">
+        <h2>暂停</h2>
+        <button type="button" id="btn-resume">继续</button>
+        <button type="button" id="btn-retry" class="ghost">重开</button>
+        <button type="button" id="btn-quit" class="ghost">返回曲目</button>
+      </div>
+    </div>
+    <div id="result-layer" class="overlay">
+      <div class="tablet">
+        <p class="eyebrow" id="result-grade">S</p>
+        <h2 id="result-title">完成</h2>
+        <ul class="result-grid">
+          <li><span>分数</span><b id="r-score">0</b></li>
+          <li><span>准确</span><b id="r-acc">0%</b></li>
+          <li><span>最大连击</span><b id="r-combo">0</b></li>
+          <li><span>Perfect</span><b id="r-pf">0</b></li>
+          <li><span>Great</span><b id="r-gr">0</b></li>
+          <li><span>Good</span><b id="r-gd">0</b></li>
+          <li><span>Miss</span><b id="r-ms">0</b></li>
+        </ul>
+        <button type="button" id="btn-again">再奏一次</button>
+        <button type="button" id="btn-back" class="ghost">返回曲目</button>
+      </div>
+    </div>
+  </section>
+
+<textarea id="skill-md" hidden>---
+name: rhythm-chart-maker
+description: Turn any uploaded audio (instrumental or vocal) into a Monument Rhythm song pack — a zip containing one or more folders, each with an audio file plus chart.json. Use when the user asks to generate a rhythm chart, beatmap, 谱面, 游玩文件, 节奏大师 chart, or a zip for the Monument Rhythm webpage.
+metadata:
+  type: workflow
+  version: "1.1"
+---
+
+# Rhythm Chart Maker
+
+Build a playable song pack for the Monument Rhythm HTML page from one audio file. Do not invent a second chart schema.
+
+## When this skill runs
+
+1. The user attached or named an audio file.
+2. The user asked for a chart / 谱面 / 游玩文件 / beatmap / zip for Monument Rhythm or 节奏大师-style play.
+
+If no audio is present, ask for a file (mp3, wav, ogg, m4a, flac) and stop.
+
+## Output contract
+
+Each song is one folder. Then zip the folder for the webpage upload button.
+
+```
+<slug>/
+  <audio-filename>
+  chart.json
+```
+
+Never put two songs in one folder. The webpage has no central song index. The zip is the pack.
+
+## chart.json
+
+```json
+{
+  "version": 1,
+  "title": "Song Title",
+  "artist": "Artist",
+  "audio": "audio.mp3",
+  "duration": 180.0,
+  "bpm": 120,
+  "offset": 0.0,
+  "lanes": 4,
+  "difficulty": "normal",
+  "preview": 8.0,
+  "notes": [
+    { "t": 1.25, "lane": 0, "type": "tap" },
+    { "t": 4.00, "lane": 2, "type": "hold", "end": 5.50 }
+  ]
+}
+```
+
+Rules:
+
+- `t` is seconds from audio time zero.
+- `lane` is 0 to lanes-1, left to right.
+- Notes must be sorted by `t`.
+- Two notes may share the same `t` only on different lanes.
+- Hold `end` must be greater than `t` by at least 0.18 s.
+- `offset` shifts every note at load time. Positive delays notes.
+- Prefer mp3 so mobile Safari can play the file.
+
+## Procedure
+
+1. Copy the source audio into a working path the sandbox can read.
+2. Detect onsets (spectral flux or equivalent). Keep a playable density.
+3. Map onsets onto 4 lanes. Avoid repeating the same lane back to back unless the difficulty is easy.
+4. Write `chart.json` next to the audio. Confirm `notes` is not empty.
+5. Zip the folder:
+
+```
+zip -r <slug>.zip <slug>
+```
+
+The zip may contain one song folder or several. Tell the user to press 上传曲包 on the Monument Rhythm page. The page stores the pack in the browser.
+
+Difficulty when the user names one — easy / normal / hard. Default normal. Lanes default to 4. Title defaults to the audio stem. Artist defaults to Unknown.
+
+## Manual repair
+
+If notes are early or late, edit `offset` in chart.json. If density is wrong, regenerate at another difficulty. Do not hand-place hundreds of notes unless the user asked for a short custom pattern.
+</textarea>
+  <input id="zip-input" type="file" accept=".zip,application/zip,application/x-zip-compressed" hidden />
+  <script src="js/jszip.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
